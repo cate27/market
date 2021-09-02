@@ -16,6 +16,8 @@ gem 'devise'
 gem 'paperclip', '~> 6.1'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 gem 'active_storage_validations'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-materialize'
 
 
 group :development, :test do

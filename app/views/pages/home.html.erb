@@ -26,9 +26,67 @@ font-family: 'Dancing Script', cursive;
 font-size: 14px;
 }
 
+.li {
+	float: left;
+	width: 280px;
+	margin-left: 15px;
+}
+
+.row {
+	float: left;
+	width: 32%;
+}
+
+.va-1 {
+	width: 175px;
+	height: 180px;
+	padding-top: 50%;
+}
+
+.va-2 {
+	width: 175px;
+	height: 180px;
+	padding-top: 50%;
+}
+
+.va-3 {
+	width: 175px;
+	height: 180px;
+	padding-top: 50%;
+}
+
 </style>
 
 
-<h1>Questa è l'homepage</h1>
-<p class="p1">Questo sito parla della vendita e dell'acquisto dei contenuti digitali</p>
+<h1 class="center">Market</h1>
+<p class="p1 center">Vendi e compra contenuti digitali</p>
+<div class="center"><%= link_to 'Vai ai contenuti', class: 'btn' %></div>
+<p class="center">Come funziona Market</p><br>
+
+<div class="container">
+<ul>
+<div class="row">
+<div class="col s12 m4">
+<li>Vantaggio1</li>
+<p class="va-1">Questo sito di Market è perfetto per creare un buon mercato di qualunque cosa vogliate creare.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col s12 m4">
+<li>Vantaggio2</li>
+<p class="va-2">Questo sito vi permette di inserire un allegato</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col s12 m4">
+<li>Vantaggio3</li>
+<p class="va-3">Il vantaggio del nostro sito è che possiate mettere qualsiasi copertina vogliate.</p>
+</div>
+</div>
+
+</ul>
+</div>
+
  

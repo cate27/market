@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20210828144929) do
     t.string "titolo"
     t.text "descrizione"
 	t.decimal "price"
-	t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+	t.datetime "created_at", precision: 6,     null: false
+    t.datetime "updated_at", precision: 6,     null: false
 	t.integer "user_id"
 	t.string "cover_file_name"
 	t.string "cover_content_type"
