@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_action :set_content, only: %i[ show edit update destroy ]
+  before_action :set_content, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :ckeck_user, only: [:edit, :update, :destroy]
 
@@ -19,23 +19,25 @@ class ContentsController < ApplicationController
   end
 
   def create
-    @content = current_user.contents.build(content_params)
+    @content = Content.new(content_params)
+	@content.user_id = current_user.id if current_user
 
     respond_to do |format|
       if @content.save
         format.html { redirect_to @content, notice: "Content was successfully created." }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new }
       end
     end
   end
+
 
   def update
     respond_to do |format|
       if @content.update(content_params)
         format.html { redirect_to @content, notice: "Content was successfully updated." }
       else
-        format.html { render :edit, status: :unprocessable_entity }
+        format.html { render :edit }
       end
     end
   end
@@ -54,7 +56,7 @@ class ContentsController < ApplicationController
     end
 
     def content_params
-      params.require(:content).permit(:titolo, :descrizione, :price)
+      params.require(:content).permit(:titolo, :descrizione, :price, :cover, :allegato)
     end
 	
 	def ckeck_user

@@ -1,10 +1,11 @@
-<%= form_with(model: content) do |form| %>
-  <% if content.errors.any? %>
+<%= form_for @content, html:
+ { multipart: true } do |form| %>
+  <% if @content.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
+      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
 
       <ul>
-        <% content.errors.each do |error| %>
+        <% @content.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -12,21 +13,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :titolo %>
+    <label class="grey-text">Carica il contenuto digitale che vuoi vendere (Formati supportati: PowerPoint, Excel, Word, PDF, immagini e MP3)</label><br>
+    <br>
+	<%= form.file_field :allegato %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :titolo %><br>
     <%= form.text_field :titolo %>
   </div>
-
   <div class="field">
-    <%= form.label :descrizione %>
-    <%= form.text_area :descrizione %>
+    <%= form.label :descrizione %><br>
+    <%= form.text_area :descrizione, class: "materialize-textarea" %>
   </div>
-
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.label :prezzo %><br>
+    <%= form.text_field :prezzo %>
   </div>
-
+  <div class="field">
+	<label class="grey-text">Carica un'immagine da utilizzare come cover per il tuo contenuto</label><br>
+    <%= form.label :cover %><br>
+    <%= form.file_field :cover %>
+  </div>  
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salva contenuto', class: "btn btn-form" %>
   </div>
+  <br>
 <% end %>

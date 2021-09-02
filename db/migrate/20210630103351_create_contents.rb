@@ -5,7 +5,7 @@ class CreateContents < ActiveRecord::Migration[6.1]
       t.text :descrizione
       t.decimal :price
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
