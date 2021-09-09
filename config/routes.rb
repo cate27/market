@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   
   get 'about' => 'pages#about'
   
+  post '/compra/:slug', to: 'transactions#create', as: :create
+  get '/pickup/:guid', to: 'transactions#pickup' , as: :pickup
+  
 end
