@@ -25,16 +25,16 @@ class Sale < ApplicationRecord
 	
 	def charge_card
 	  begin
-	    charge = Stripe::Charge.create (
+	  save!
+	    charge = Stripe::Charge.create(
 		  amount: self.amount,
 		  currency: "eur",
 		  card: self.stripe_token,
-		  description: "vendita di un contenuto"
-		  )
+		  description: "vendita di un contenuto")
 		self.update(stripe_id: charge.id)
 		self.complete!
 		
-	  rescue stripe::StripeError => e
+	  rescue Stripe::StripeError => e
 	    self.update_attributes(error: e.message)
 		self.fail!
 	end
