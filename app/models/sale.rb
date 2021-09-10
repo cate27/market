@@ -1,4 +1,4 @@
-class Sale < ApplicationRecord
+class Sale < ApplicationRecord::Base
 
 	before_create :generate_guid
 	belongs_to :content
