@@ -37,7 +37,8 @@ class Sale < ApplicationRecord
 	  rescue Stripe::StripeError => e
 	    self.update_attributes(error: e.message)
 		self.fail!
-	end
+		end
+	end 
 	
 	private
 		def generate_guid
