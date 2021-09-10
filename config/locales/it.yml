@@ -1,0 +1,281 @@
+---
+lt:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Nepraeitos patikros: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Negalima ištrinti įrašo nes priklausomas %{record} egzistuoja
+          has_many: Negalima ištrinti įrašų nes priklausomi %{record} egzistuoja
+  date:
+    abbr_day_names:
+    - Sek
+    - Pir
+    - Ant
+    - Tre
+    - Ket
+    - Pen
+    - Šeš
+    abbr_month_names:
+    -
+    - Sau
+    - Vas
+    - Kov
+    - Bal
+    - Geg
+    - Bir
+    - Lie
+    - Rgp
+    - Rgs
+    - Spa
+    - Lap
+    - Grd
+    day_names:
+    - sekmadienis
+    - pirmadienis
+    - antradienis
+    - trečiadienis
+    - ketvirtadienis
+    - penktadienis
+    - šeštadienis
+    formats:
+      default: "%Y-%m-%d"
+      long: "%Y m. %B %d d."
+      short: "%b %d"
+    month_names:
+    -
+    - sausio
+    - vasario
+    - kovo
+    - balandžio
+    - gegužės
+    - birželio
+    - liepos
+    - rugpjūčio
+    - rugsėjo
+    - spalio
+    - lapkričio
+    - gruodžio
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: apie %{count} valandą
+        few: apie %{count} valandas
+        other: apie %{count} valandų
+      about_x_months:
+        one: apie %{count} mėnesį
+        few: apie %{count} mėnesius
+        other: apie %{count} mėnesių
+      about_x_years:
+        one: apie %{count} metus
+        few: apie %{count} metus
+        other: apie %{count} metų
+      almost_x_years:
+        one: beveik %{count} metai
+        few: beveik %{count} metai
+        other: beveik %{count} metų
+      half_a_minute: pusė minutės
+      less_than_x_seconds:
+        one: mažiau nei %{count} sekundė
+        few: mažiau nei %{count} sekundės
+        other: mažiau nei %{count} sekundžių
+      less_than_x_minutes:
+        one: mažiau nei %{count} minutė
+        few: mažiau nei %{count} minutės
+        other: mažiau nei %{count} minučių
+      over_x_years:
+        one: virš %{count} metų
+        few: virš %{count} metų
+        other: virš %{count} metų
+      x_seconds:
+        one: "%{count} sekundė"
+        few: "%{count} sekundės"
+        other: "%{count} sekundžių"
+      x_minutes:
+        one: "%{count} minutė"
+        few: "%{count} minutės"
+        other: "%{count} minučių"
+      x_days:
+        one: "%{count} diena"
+        few: "%{count} dienos"
+        other: "%{count} dienų"
+      x_months:
+        one: "%{count} mėnesis"
+        few: "%{count} mėnesiai"
+        other: "%{count} mėnesių"
+    prompts:
+      second: Sekundės
+      minute: Minutė
+      hour: Valanda
+      day: Diena
+      month: Mėnuo
+      year: Metai
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: turi būti patvirtintas
+      blank: negali būti tuščias
+      confirmation: neteisingai pakartotas
+      empty: negali būti tuščias
+      equal_to: turi būti lygus %{count}
+      even: turi būti lyginis skaičius
+      exclusion: yra rezervuotas
+      greater_than: turi būti didesnis už %{count}
+      greater_than_or_equal_to: turi būti didesnis arba lygus %{count}
+      inclusion: nenumatyta reikšmė
+      invalid: neteisingas
+      less_than: turi būti mažesnis už %{count}
+      less_than_or_equal_to: turi būti mažesnis arba lygus %{count}
+      not_a_number: ne skaičius
+      not_an_integer: privalo būti sveikas skaičius
+      odd: turi būti nelyginis skaičius
+      other_than: privalo būti kitoks nei %{count}
+      present: turi būti tuščias
+      taken: jau užimtas
+      too_long:
+        one: per ilgas (daugiausiai %{count} simbolis)
+        few: per ilgas (daugiausiai %{count} simboliai)
+        other: per ilgas (daugiausiai %{count} simbolių)
+      too_short:
+        one: per trumpas (mažiausiai %{count} simbolis)
+        few: per trumpas (mažiausiai %{count} simboliai)
+        other: per trumpas (mažiausiai %{count} simbolių)
+      wrong_length: neteisingo ilgio (turi būti %{count} simboliai)
+    template:
+      body: 'Šiuose laukuose yra klaidų:'
+      header:
+        one: Išsaugant objektą %{model} rasta %{count} klaida
+        few: Išsaugant objektą %{model} rastos %{count} klaidos
+        other: Išsaugant objektą %{model} rasta %{count} klaidų
+  helpers:
+    select:
+      prompt: Prašom pasirinkti
+    submit:
+      create: Sukurti %{model}
+      submit: Išsaugoti %{model}
+      update: Atnaujinti %{model}
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Milijardas
+          million: Milijonas
+          quadrillion: Kvadrilijonas
+          thousand: Tūkstantis
+          trillion: Trilijonas
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Baitas
+            few: Baitai
+            other: Baitų
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " ir "
+      two_words_connector: " ir "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm
+    
+devise:
+    confirmations:
+      confirmed: "Il tuo account è stato correttamente confermato."
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo account."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo account."
+    failure:
+      already_authenticated: "Hai già effettuato l'accesso."
+      inactive: "Il tuo account non è ancora stato attivato."
+      invalid: "%{authentication_keys} o password non validi."
+      locked: "Il tuo account è bloccato."
+      last_attempt: "Hai un altro tentativo prima che il tuo account venga bloccato."
+      not_found_in_database: "%{authentication_keys} o password non validi."
+      timeout: "La tua sessione è scaduta, accedi nuovamente per continuare."
+      unauthenticated: "Devi accedere o registrarti per continuare."
+      unconfirmed: "Devi confermare il tuo indirizzo email per continuare."
+    mailer:
+      confirmation_instructions:
+        subject: "Istruzioni per la conferma"
+      reset_password_instructions:
+        subject: "Istruzioni per reimpostare la password"
+      unlock_instructions:
+        subject: "Istruzioni per sbloccare l'account"
+      password_change:
+        subject: "Password reimpostata"
+    omniauth_callbacks:
+      failure: 'Non è stato possibile autenticarti come %{kind} perché "%{reason}".'
+      success: "Autenticato con successo dall'account %{kind}."
+    passwords:
+      no_token: "Non è possibile accedere a questa pagina se non provieni da una e-mail di ripristino della password. Se provieni da una e-mail di ripristino della password, assicurarti di utilizzare l'URL completo."
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per reimpostare la tua password."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per ripristinare la password."
+      updated: "La tua password è stata cambiata correttamente. Ora sei collegato."
+      updated_not_active: "La tua password è stata cambiata correttamente."
+    registrations:
+      destroyed: "Arrivederci! Il tuo account è stato cancellato. Speriamo di rivederti presto."
+      signed_up: "Benvenuto! Ti sei registrato correttamente."
+      signed_up_but_inactive: "Ti sei registrato correttamente. Tuttavia non puoi effettuare l'accesso perché il tuo account non è stato ancora attivato."
+      signed_up_but_locked: "Ti sei registrato correttamente. Tuttavia non puoi effettuare l'accesso perché il tuo account è bloccato."
+      signed_up_but_unconfirmed: "Ti sei registrato correttamente. Un messaggio con il link per confermare il tuo account è stato inviato al tuo indirizzo email."
+      update_needs_confirmation: "Il tuo account è stato aggiornato, tuttavia è necessario verificare il tuo nuovo indirizzo email. Entro qualche minuto riceverai un messaggio email con le istruzioni per confermare il tuo nuovo indirizzo email."
+      updated: "Il tuo account è stato aggiornato."
+    sessions:
+      signed_in: "Accesso effettuato con successo."
+      signed_out: "Sei uscito correttamente."
+      already_signed_out: "Sei uscito correttamente."
+    unlocks:
+      send_instructions: "Entro qualche minuto riceverai un messaggio email con le istruzioni per sbloccare il tuo account."
+      send_paranoid_instructions: "Se il tuo indirizzo email esiste nel nostro database, entro qualche minuto riceverai un messaggio email con le istruzioni per sbloccare il tuo account."
+      unlocked: "Il tuo account è stato correttamente sbloccato. Accedi per continuare."
+  errors:
+    messages:
+      already_confirmed: "è stato già confermato, prova ad effettuare un nuovo accesso"
+      confirmation_period_expired: "deve essere confermato entro %{period}, si prega di richiederne uno nuovo"
+      expired: "è scaduto, si prega di richiederne uno nuovo"
+      not_found: "non trovato"
+      not_locked: "non era bloccato"
+      not_saved:
+        one: "Un errore ha impedito di salvare questo %{resource}:"
+        other: "%{count} errori hanno impedito di salvare questo %{resource}:"
