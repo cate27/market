@@ -21,6 +21,7 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe-rails'
 gem 'aasm'
+gem 'aws-sdk', '~> 2.3'
 
 
 #group :development, :test do
