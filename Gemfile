@@ -22,6 +22,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe-rails'
 gem 'aasm'
 gem 'aws-sdk', '~> 2.3'
+gem 'font-awesome-sass'
 
 
 #group :development, :test do

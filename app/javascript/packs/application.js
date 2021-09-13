@@ -20,3 +20,8 @@ ActiveStorage.start()
 //= require materialize-sprockets
 //= require turbolinks
 //= require bootstrap
+
+$(document).ready(function(){
+    $('.parallax').parallax();
+});
+        
