@@ -21,7 +21,4 @@ ActiveStorage.start()
 //= require turbolinks
 //= require bootstrap
 
-$(document).ready(function(){
-    $('.parallax').parallax();
-});
         
