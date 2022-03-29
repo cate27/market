@@ -8,6 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+//= require jquery
+//= require jquery_ujs
+//= require rails_ujs
+//= require materialize
+//= require materialize-sprockets
+//= require turbolinks
+//= require bootstrap
+
+        

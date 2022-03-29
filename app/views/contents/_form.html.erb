@@ -1,0 +1,43 @@
+<%= form_for @content, html:
+ { multipart: true } do |form| %>
+  <% if @content.errors.any? %>
+    <div id="error_explanation">
+      <h4><b><%= pluralize(@content.errors.count, "error") %> non permettono al form di essere inviato </b></h4>
+
+      <ul>
+        <% @content.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label class="grey-text">Carica il contenuto digitale che vuoi vendere (Formati supportati: PowerPoint, Excel, Word, PDF, immagini e MP3)</label><br>
+    <br>
+	<%= form.file_field :allegato %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :titolo %><br>
+    <%= form.text_field :titolo %>
+  </div>
+  <div class="field">
+    <%= form.label :descrizione %><br>
+    <%= form.text_area :descrizione, class: "materialize-textarea" %>
+  </div>
+  <div class="field">
+    <%= form.label :prezzo_min_50_cent %><br>
+    <%= form.text_field :price %>
+  </div>
+  <div class="field">
+	<label class="grey-text">Carica un'immagine da utilizzare come cover per il tuo contenuto</label><br>
+    <%= form.label :cover %><br>
+    <%= form.file_field :cover %>
+  </div>  
+  <br>
+  <div class="actions">
+    <%= form.submit 'Salva contenuto', class: "btn btn-form" %>
+  </div>
+  <br>
+<% end %>

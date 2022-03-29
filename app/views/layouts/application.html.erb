@@ -8,9 +8,54 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
-    <%= yield %>
+	
+
+	<%= render "layouts/header" %>
+	
+	<div class="container">
+	<%= flash.each do |type, message| %>
+	 <script>
+	  Materialize.toast('<%= message %>', 4000)
+	 </script>
+	 <% end %>
+	</div>
+ 
+<%= render 'pages/slider' if action_name == 'home' %>
+ 
+<main class="container">
+  <%= yield %>
+</main>
+  
+  <%= render "layouts/footer" %>
   </body>
+  
+
+  <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js">
+    $(".button-collapse").sidenav;
+  </script>
+  
+  <script>
+	$(document).ready(function(){
+    $('.tabs').tabs();
+    });
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+  $('.parallax').parallax();
+  });
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+  $(".dropdown-trigger").dropdown();
+  });
+  </script>
+ 
+
 </html>
